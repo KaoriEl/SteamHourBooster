@@ -187,6 +187,5 @@ storage/crypto/RSA/private/Key.pem
 storage/sentry/
 storage/***/**/*
 
-
 # End of https://www.gitignore.io/api/osx,node,linux,macos,windows,vagrant,intellij,visualstudiocode
 
