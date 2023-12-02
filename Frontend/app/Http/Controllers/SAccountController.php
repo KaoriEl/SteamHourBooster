@@ -217,6 +217,7 @@ class SAccountController extends Controller
      */
     public function toggleBoost(Request $request, SAccount $account)
     {
+        dd(123);
         $this->ownsAccount($account);
 
         $request->validate([
