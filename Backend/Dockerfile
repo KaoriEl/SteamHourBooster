@@ -4,14 +4,8 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN yarn
-
-RUN npm i
-RUN npm install crypto-js
-
 COPY . .
 
 EXPOSE 8888
 
-CMD [ "node", "./build/app.js" ]
-
+CMD ["sh", "-c", "npm install && node ./build/app.js"]
