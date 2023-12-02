@@ -11,7 +11,7 @@ RUN npm install crypto-js
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 8888
 
 CMD [ "node", "./build/app.js" ]
 

@@ -29,7 +29,7 @@ services:
     working_dir: /var/www
     tty: true
     ports:
-      - "8080:80"
+      - "8888:80"
     volumes:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d
