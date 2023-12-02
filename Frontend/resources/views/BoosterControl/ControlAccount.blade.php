@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="row">
                                     @if (isset($account->steamLink))
-                                        <a href="http://steamcommunity.com/profiles/{{$account->steamLink}}">
+                                        <a target="_blank" href="http://steamcommunity.com/profiles/{{$account->steamLink}}">
                                             <button type="button" class="btn btn-info m-0 ml-1 pr-2 mr-4">Steam Profile
                                             </button>
                                         </a>
