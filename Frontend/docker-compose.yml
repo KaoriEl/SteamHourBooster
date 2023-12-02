@@ -33,22 +33,20 @@ services:
     volumes:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d
+
   mysql:
-    build:
-      context: ./mysql
-      args:
-        - 'MYSQL_VERSION=5.7.30'
+    image: mysql:8.0
     container_name: mysql
     restart: unless-stopped
-    tty: true
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
     ports:
       - "3306:3306"
-    environment:
-      MYSQL_DATABASE: SteamHourBooster
-      MYSQL_ROOT_PASSWORD: DoKM91AS
-      MYSQL_USER: SteamHourBooster
-      MYSQL_PASSWORD: DoKM91ASonGithub
-      SERVICE_NAME: mysql
     volumes:
       - mysql:/var/lib/mysql/
       - ./mysql/my.cnf:/etc/mysql/my.cnf

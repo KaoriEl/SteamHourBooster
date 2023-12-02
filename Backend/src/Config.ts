@@ -28,7 +28,7 @@ class configuration {
         mysql: {
             host: 'mysql',
             user: 'SteamHourBooster',
-            password: 'DoKM91ASonGithub',
+            password: 'DoKM91AS',
             database: 'SteamHourBooster',
             insecureAuth: true
         },

