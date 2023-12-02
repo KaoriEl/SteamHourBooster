@@ -8,7 +8,7 @@ use App\User;
 
 class SAccount extends Model
 {
-    protected $table = "s_accounts";
+//    protected $table = "s_accounts";
 
     function owner(){
 
